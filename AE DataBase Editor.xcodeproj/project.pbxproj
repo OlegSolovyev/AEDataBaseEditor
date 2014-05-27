@@ -23,6 +23,7 @@
 		7F0FB9F71934FAFB00A22BE5 /* AEAddSymptomWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */; };
 		7F8858761935177100432A24 /* AEAddCauseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8858741935177100432A24 /* AEAddCauseWindow.m */; };
 		7F8858771935177100432A24 /* AEAddCauseWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8858751935177100432A24 /* AEAddCauseWindow.xib */; };
+		7F88587D19354B9900432A24 /* AE.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F88587C19354B9900432A24 /* AE.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		7F8858731935177100432A24 /* AEAddCauseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAddCauseWindow.h; sourceTree = "<group>"; };
 		7F8858741935177100432A24 /* AEAddCauseWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddCauseWindow.m; sourceTree = "<group>"; };
 		7F8858751935177100432A24 /* AEAddCauseWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddCauseWindow.xib; sourceTree = "<group>"; };
+		7F88587C19354B9900432A24 /* AE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AE.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		7F0FB9B91934D2C200A22BE5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7F88587B19354B9900432A24 /* Resources */,
 				7F0FB9BA1934D2C200A22BE5 /* AE DataBase Editor-Info.plist */,
 				7F0FB9BB1934D2C200A22BE5 /* InfoPlist.strings */,
 				7F0FB9BE1934D2C200A22BE5 /* main.m */,
@@ -173,6 +176,14 @@
 				7F0FB9D91934D2C200A22BE5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7F88587B19354B9900432A24 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F88587C19354B9900432A24 /* AE.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 				7F0FB9ED1934E4A100A22BE5 /* MainViewController.xib in Resources */,
 				7F8858771935177100432A24 /* AEAddCauseWindow.xib in Resources */,
 				7F0FB9C31934D2C200A22BE5 /* Credits.rtf in Resources */,
+				7F88587D19354B9900432A24 /* AE.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
