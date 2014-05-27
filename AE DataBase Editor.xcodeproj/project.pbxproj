@@ -12,12 +12,17 @@
 		7F0FB9BF1934D2C200A22BE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9BE1934D2C200A22BE5 /* main.m */; };
 		7F0FB9C31934D2C200A22BE5 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9C11934D2C200A22BE5 /* Credits.rtf */; };
 		7F0FB9C61934D2C200A22BE5 /* AEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9C51934D2C200A22BE5 /* AEAppDelegate.m */; };
-		7F0FB9C91934D2C200A22BE5 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9C71934D2C200A22BE5 /* MainMenu.xib */; };
 		7F0FB9CB1934D2C200A22BE5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9CA1934D2C200A22BE5 /* Images.xcassets */; };
 		7F0FB9D21934D2C200A22BE5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0FB9D11934D2C200A22BE5 /* XCTest.framework */; };
 		7F0FB9D31934D2C200A22BE5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F0FB9B21934D2C200A22BE5 /* Cocoa.framework */; };
 		7F0FB9DB1934D2C200A22BE5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9D91934D2C200A22BE5 /* InfoPlist.strings */; };
 		7F0FB9DD1934D2C200A22BE5 /* AE_DataBase_EditorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9DC1934D2C200A22BE5 /* AE_DataBase_EditorTests.m */; };
+		7F0FB9EC1934E4A100A22BE5 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9EA1934E4A100A22BE5 /* MainViewController.m */; };
+		7F0FB9ED1934E4A100A22BE5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9EB1934E4A100A22BE5 /* MainViewController.xib */; };
+		7F0FB9F61934FAFB00A22BE5 /* AEAddSymptomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F41934FAFB00A22BE5 /* AEAddSymptomWindow.m */; };
+		7F0FB9F71934FAFB00A22BE5 /* AEAddSymptomWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */; };
+		7F0FB9FB1934FC1000A22BE5 /* AEAddModelWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F91934FC0F00A22BE5 /* AEAddModelWindow.m */; };
+		7F0FB9FC1934FC1000A22BE5 /* AEAddModelWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9FA1934FC1000A22BE5 /* AEAddModelWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,13 +48,21 @@
 		7F0FB9C21934D2C200A22BE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		7F0FB9C41934D2C200A22BE5 /* AEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEAppDelegate.h; sourceTree = "<group>"; };
 		7F0FB9C51934D2C200A22BE5 /* AEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AEAppDelegate.m; sourceTree = "<group>"; };
-		7F0FB9C81934D2C200A22BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7F0FB9CA1934D2C200A22BE5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7F0FB9D01934D2C200A22BE5 /* AE DataBase EditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AE DataBase EditorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0FB9D11934D2C200A22BE5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		7F0FB9D81934D2C200A22BE5 /* AE DataBase EditorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AE DataBase EditorTests-Info.plist"; sourceTree = "<group>"; };
 		7F0FB9DA1934D2C200A22BE5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F0FB9DC1934D2C200A22BE5 /* AE_DataBase_EditorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AE_DataBase_EditorTests.m; sourceTree = "<group>"; };
+		7F0FB9E91934E4A100A22BE5 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
+		7F0FB9EA1934E4A100A22BE5 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
+		7F0FB9EB1934E4A100A22BE5 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = ../MainViewController.xib; sourceTree = "<group>"; };
+		7F0FB9F31934FAFB00A22BE5 /* AEAddSymptomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAddSymptomWindow.h; sourceTree = "<group>"; };
+		7F0FB9F41934FAFB00A22BE5 /* AEAddSymptomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddSymptomWindow.m; sourceTree = "<group>"; };
+		7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddSymptomWindow.xib; sourceTree = "<group>"; };
+		7F0FB9F81934FC0F00A22BE5 /* AEAddModelWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAddModelWindow.h; sourceTree = "<group>"; };
+		7F0FB9F91934FC0F00A22BE5 /* AEAddModelWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddModelWindow.m; sourceTree = "<group>"; };
+		7F0FB9FA1934FC1000A22BE5 /* AEAddModelWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddModelWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +130,15 @@
 			children = (
 				7F0FB9C41934D2C200A22BE5 /* AEAppDelegate.h */,
 				7F0FB9C51934D2C200A22BE5 /* AEAppDelegate.m */,
-				7F0FB9C71934D2C200A22BE5 /* MainMenu.xib */,
+				7F0FB9E91934E4A100A22BE5 /* MainViewController.h */,
+				7F0FB9EA1934E4A100A22BE5 /* MainViewController.m */,
+				7F0FB9EB1934E4A100A22BE5 /* MainViewController.xib */,
+				7F0FB9F31934FAFB00A22BE5 /* AEAddSymptomWindow.h */,
+				7F0FB9F41934FAFB00A22BE5 /* AEAddSymptomWindow.m */,
+				7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */,
+				7F0FB9F81934FC0F00A22BE5 /* AEAddModelWindow.h */,
+				7F0FB9F91934FC0F00A22BE5 /* AEAddModelWindow.m */,
+				7F0FB9FA1934FC1000A22BE5 /* AEAddModelWindow.xib */,
 				7F0FB9CA1934D2C200A22BE5 /* Images.xcassets */,
 				7F0FB9B91934D2C200A22BE5 /* Supporting Files */,
 			);
@@ -232,9 +253,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F0FB9BD1934D2C200A22BE5 /* InfoPlist.strings in Resources */,
+				7F0FB9FC1934FC1000A22BE5 /* AEAddModelWindow.xib in Resources */,
 				7F0FB9CB1934D2C200A22BE5 /* Images.xcassets in Resources */,
+				7F0FB9F71934FAFB00A22BE5 /* AEAddSymptomWindow.xib in Resources */,
+				7F0FB9ED1934E4A100A22BE5 /* MainViewController.xib in Resources */,
 				7F0FB9C31934D2C200A22BE5 /* Credits.rtf in Resources */,
-				7F0FB9C91934D2C200A22BE5 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F0FB9F61934FAFB00A22BE5 /* AEAddSymptomWindow.m in Sources */,
 				7F0FB9C61934D2C200A22BE5 /* AEAppDelegate.m in Sources */,
+				7F0FB9FB1934FC1000A22BE5 /* AEAddModelWindow.m in Sources */,
+				7F0FB9EC1934E4A100A22BE5 /* MainViewController.m in Sources */,
 				7F0FB9BF1934D2C200A22BE5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,14 +317,6 @@
 				7F0FB9C21934D2C200A22BE5 /* en */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		7F0FB9C71934D2C200A22BE5 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7F0FB9C81934D2C200A22BE5 /* Base */,
-			);
-			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		7F0FB9D91934D2C200A22BE5 /* InfoPlist.strings */ = {
