@@ -9,9 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AEAddCauseWindow : NSWindowController
-@property (weak) IBOutlet NSScrollView *causeTextView;
-@property (weak) IBOutlet NSScrollView *tagsTextView;
+@property (retain) IBOutlet NSTextView *causeTextView;
+@property (retain) IBOutlet NSTextView *tagsTextView;
 @property (weak) IBOutlet NSComboBox *addTagComboBox;
+
+@property (nonatomic, retain) NSTextView *parentTextView;
+
 - (IBAction)addTagButtonPressed:(id)sender;
+- (IBAction)doneButtonPressed:(id)sender;
+- (IBAction)undoButtonPressed:(id)sender;
 
 @end

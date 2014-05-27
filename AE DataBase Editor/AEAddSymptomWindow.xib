@@ -7,8 +7,9 @@
         <customObject id="-2" userLabel="File's Owner" customClass="AEAddSymptomWindow">
             <connections>
                 <outlet property="categoryComboBox" destination="xnB-Y8-Sta" id="fqv-c7-MOl"/>
-                <outlet property="causesTextView" destination="Jfb-z6-jlz" id="TdB-Ix-8qj"/>
-                <outlet property="modelsTextView" destination="2Q9-Vq-tRK" id="Aho-Zf-kUH"/>
+                <outlet property="causesTextView" destination="NPO-i3-bv5" id="2wH-QI-5bG"/>
+                <outlet property="modelsComboBox" destination="nZ8-Id-HUf" id="CSg-lU-DuK"/>
+                <outlet property="modelsTextView" destination="O31-eJ-ZyX" id="Mnn-vK-DRP"/>
                 <outlet property="nameTextField" destination="Dw8-kb-U6K" id="po1-Wr-dcF"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -54,27 +55,35 @@
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dw8-kb-U6K">
                         <rect key="frame" x="274" y="492" width="731" height="39"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="lNf-HU-YfV">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Enter the symptom name" drawsBackground="YES" id="lNf-HU-YfV">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q9-Vq-tRK">
-                        <rect key="frame" x="274" y="347" width="597" height="73"/>
+                        <rect key="frame" x="274" y="367" width="597" height="53"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="53K-Dg-sYO">
-                            <rect key="frame" x="1" y="1" width="595" height="71"/>
+                            <rect key="frame" x="1" y="1" width="595" height="51"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="O31-eJ-ZyX">
-                                    <rect key="frame" x="0.0" y="0.0" width="595" height="71"/>
+                                <textView ambiguous="YES" editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="O31-eJ-ZyX">
+                                    <rect key="frame" x="0.0" y="0.0" width="595" height="51"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="595" height="71"/>
+                                    <size key="minSize" width="595" height="51"/>
                                     <size key="maxSize" width="729" height="10000000"/>
+                                    <attributedString key="textStorage">
+                                        <fragment content="All">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="toolTip"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="595" height="71"/>
+                                    <size key="minSize" width="595" height="51"/>
                                     <size key="maxSize" width="729" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -85,12 +94,12 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="uKO-yr-TtN">
-                            <rect key="frame" x="580" y="1" width="16" height="71"/>
+                            <rect key="frame" x="580" y="1" width="16" height="51"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ix6-TZ-zQw">
-                        <rect key="frame" x="940" y="363" width="110" height="43"/>
+                        <rect key="frame" x="761" y="309" width="110" height="43"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="squareTextured" title="Add Model" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="moI-DM-4BU">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -101,7 +110,7 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="77j-ZK-JyF">
-                        <rect key="frame" x="136" y="227" width="113" height="34"/>
+                        <rect key="frame" x="136" y="188" width="113" height="34"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Causes:" id="TZq-R1-kFQ">
                             <font key="font" metaFont="system" size="24"/>
@@ -110,13 +119,13 @@
                         </textFieldCell>
                     </textField>
                     <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jfb-z6-jlz">
-                        <rect key="frame" x="274" y="188" width="597" height="102"/>
+                        <rect key="frame" x="274" y="149" width="597" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="exo-4K-bKT">
                             <rect key="frame" x="1" y="1" width="595" height="100"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="NPO-i3-bv5">
+                                <textView ambiguous="YES" editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="NPO-i3-bv5">
                                     <rect key="frame" x="0.0" y="0.0" width="595" height="100"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -139,7 +148,7 @@
                         </scroller>
                     </scrollView>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4KW-cf-JQo">
-                        <rect key="frame" x="940" y="216" width="110" height="46"/>
+                        <rect key="frame" x="940" y="177" width="110" height="46"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="squareTextured" title="Add Cause" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hOk-BK-0ol">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -150,9 +159,9 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mhI-2c-Ego">
-                        <rect key="frame" x="472" y="67" width="157" height="47"/>
+                        <rect key="frame" x="472" y="28" width="157" height="47"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="squareTextured" title="Save" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xwC-vm-Sy7">
+                        <buttonCell key="cell" type="squareTextured" title="Add symptom" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="xwC-vm-Sy7">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -163,10 +172,42 @@
                     <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xnB-Y8-Sta">
                         <rect key="frame" x="275" y="447" width="303" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="jQI-Al-hUS">
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="Choose the category" drawsBackground="YES" numberOfVisibleItems="9" id="jQI-Al-hUS">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <objectValues>
+                                <string>Двигатель</string>
+                                <string>Система охлаждения</string>
+                                <string>Топливная система</string>
+                                <string>Сцепление</string>
+                                <string>Коробка передач</string>
+                                <string>Шины и подвеска</string>
+                                <string>Рулевое управление</string>
+                                <string>Тормозная система</string>
+                                <string>Общее</string>
+                            </objectValues>
+                        </comboBoxCell>
+                    </comboBox>
+                    <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZ8-Id-HUf">
+                        <rect key="frame" x="276" y="320" width="334" height="26"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" numberOfVisibleItems="5" id="Ifv-Nw-D4R">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <objectValues>
+                                <string>ВАЗ 2101</string>
+                                <string>ВАЗ 2102</string>
+                                <string>ВАЗ 2103</string>
+                                <string>ВАЗ 2104</string>
+                                <string>ВАЗ 2105</string>
+                                <string>ВАЗ 2106</string>
+                                <string>ВАЗ 2107</string>
+                                <string>ВАЗ 2108</string>
+                                <string>ВАЗ 2109</string>
+                                <string>ВАЗ 2110</string>
+                            </objectValues>
                         </comboBoxCell>
                     </comboBox>
                 </subviews>

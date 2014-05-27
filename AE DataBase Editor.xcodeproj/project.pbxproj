@@ -21,8 +21,6 @@
 		7F0FB9ED1934E4A100A22BE5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9EB1934E4A100A22BE5 /* MainViewController.xib */; };
 		7F0FB9F61934FAFB00A22BE5 /* AEAddSymptomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F41934FAFB00A22BE5 /* AEAddSymptomWindow.m */; };
 		7F0FB9F71934FAFB00A22BE5 /* AEAddSymptomWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */; };
-		7F0FB9FB1934FC1000A22BE5 /* AEAddModelWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F91934FC0F00A22BE5 /* AEAddModelWindow.m */; };
-		7F0FB9FC1934FC1000A22BE5 /* AEAddModelWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9FA1934FC1000A22BE5 /* AEAddModelWindow.xib */; };
 		7F8858761935177100432A24 /* AEAddCauseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8858741935177100432A24 /* AEAddCauseWindow.m */; };
 		7F8858771935177100432A24 /* AEAddCauseWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8858751935177100432A24 /* AEAddCauseWindow.xib */; };
 /* End PBXBuildFile section */
@@ -62,9 +60,6 @@
 		7F0FB9F31934FAFB00A22BE5 /* AEAddSymptomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAddSymptomWindow.h; sourceTree = "<group>"; };
 		7F0FB9F41934FAFB00A22BE5 /* AEAddSymptomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddSymptomWindow.m; sourceTree = "<group>"; };
 		7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddSymptomWindow.xib; sourceTree = "<group>"; };
-		7F0FB9F81934FC0F00A22BE5 /* AEAddModelWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAddModelWindow.h; sourceTree = "<group>"; };
-		7F0FB9F91934FC0F00A22BE5 /* AEAddModelWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddModelWindow.m; sourceTree = "<group>"; };
-		7F0FB9FA1934FC1000A22BE5 /* AEAddModelWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddModelWindow.xib; sourceTree = "<group>"; };
 		7F8858731935177100432A24 /* AEAddCauseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAddCauseWindow.h; sourceTree = "<group>"; };
 		7F8858741935177100432A24 /* AEAddCauseWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddCauseWindow.m; sourceTree = "<group>"; };
 		7F8858751935177100432A24 /* AEAddCauseWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddCauseWindow.xib; sourceTree = "<group>"; };
@@ -141,9 +136,6 @@
 				7F0FB9F31934FAFB00A22BE5 /* AEAddSymptomWindow.h */,
 				7F0FB9F41934FAFB00A22BE5 /* AEAddSymptomWindow.m */,
 				7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */,
-				7F0FB9F81934FC0F00A22BE5 /* AEAddModelWindow.h */,
-				7F0FB9F91934FC0F00A22BE5 /* AEAddModelWindow.m */,
-				7F0FB9FA1934FC1000A22BE5 /* AEAddModelWindow.xib */,
 				7F8858731935177100432A24 /* AEAddCauseWindow.h */,
 				7F8858741935177100432A24 /* AEAddCauseWindow.m */,
 				7F8858751935177100432A24 /* AEAddCauseWindow.xib */,
@@ -261,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F0FB9BD1934D2C200A22BE5 /* InfoPlist.strings in Resources */,
-				7F0FB9FC1934FC1000A22BE5 /* AEAddModelWindow.xib in Resources */,
 				7F0FB9CB1934D2C200A22BE5 /* Images.xcassets in Resources */,
 				7F0FB9F71934FAFB00A22BE5 /* AEAddSymptomWindow.xib in Resources */,
 				7F0FB9ED1934E4A100A22BE5 /* MainViewController.xib in Resources */,
@@ -287,7 +278,6 @@
 			files = (
 				7F0FB9F61934FAFB00A22BE5 /* AEAddSymptomWindow.m in Sources */,
 				7F0FB9C61934D2C200A22BE5 /* AEAppDelegate.m in Sources */,
-				7F0FB9FB1934FC1000A22BE5 /* AEAddModelWindow.m in Sources */,
 				7F0FB9EC1934E4A100A22BE5 /* MainViewController.m in Sources */,
 				7F0FB9BF1934D2C200A22BE5 /* main.m in Sources */,
 				7F8858761935177100432A24 /* AEAddCauseWindow.m in Sources */,

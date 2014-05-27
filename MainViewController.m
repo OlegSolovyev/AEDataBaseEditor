@@ -21,8 +21,7 @@
     if (self) {
         // Initialization code here.
         NSLog(@"Init");
-        [self.dbView setEditable:FALSE];
-        NSLog(@"%d", self.dbView.isEditable);
+        self.dbPath = @"";
     }
     return self;
 }
@@ -34,7 +33,7 @@
     
     NSArray* txtType = [NSArray arrayWithObject:[NSString stringWithFormat:@"%@",kUTTypeText]];
     NSLog(@"%@",txtType[0]);
-    [openDlg setAllowedFileTypes:txtType];
+    [openDlg setAllowedFileTypes:@[@"txt"]];
     
     [openDlg beginWithCompletionHandler:^(NSInteger result){
         NSArray* files = [openDlg filenames];
@@ -47,31 +46,41 @@
                 text = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
             }
             if(text){
-                [self.dbView insertText:text];
+                [self.dbView setString:text];
+                [self.dbView setEditable:NO];
             }
-//            else {
-//                [self.dbView insertText:@""];
-//                
-//                
-//                NSAlert *alert = [[NSAlert alloc]init];
-//                [alert setMessageText:@"Application Message"];
-//                [alert setAlertStyle:NSInformationalAlertStyle];
-//                [alert setInformativeText:@"Select Only TXT"];
-//                [alert beginSheetModalForWindow:self.view.window
-//                                  modalDelegate:self didEndSelector:nil contextInfo:nil];
-//            }
+
             self.dbPath = filePath;
             NSLog(@"%@",filePath);
             //do something with the file at filePath
         }
     }];
-//    [self.dbView setEditable : NO];
-    NSLog(@"%d", self.dbView.isEditable);
 }
 
 - (IBAction)addSymptomButtonPressed:(id)sender {
     self.addSymptomWindow = [[AEAddSymptomWindow alloc] initWithWindowNibName:@"AEAddSymptomWindow"];
+    [self.addSymptomWindow setParentTextView:self.dbView];
     [self.addSymptomWindow showWindow:self];
+}
+
+- (IBAction)saveButtonPressed:(id)sender {
+    if([self.dbPath isEqualToString:@""]){
+        NSSavePanel*    panel = [NSSavePanel savePanel];
+        [panel setAllowedFileTypes:@[@"txt"]];
+        [panel beginSheetModalForWindow:self.window completionHandler:^(NSInteger result){
+            if (result == NSFileHandlingPanelOKButton)
+            {
+                NSURL*  theFile = [panel URL];
+                [self.dbView.string writeToURL:theFile atomically:NO encoding:NSUTF8StringEncoding error:nil];
+                // Write the contents in the new format.
+            }
+        }];
+    } else{
+        [self.dbView.string writeToFile:self.dbPath
+                             atomically:NO
+                               encoding:NSUTF8StringEncoding
+                                  error:nil];
+    }
 }
 
 @end

@@ -10,9 +10,13 @@
 
 @interface AEAddSymptomWindow : NSWindowController
 @property (weak) IBOutlet NSTextField *nameTextField;
-@property (weak) IBOutlet NSScrollView *modelsTextView;
-@property (weak) IBOutlet NSScrollView *causesTextView;
+@property (retain) IBOutlet NSTextView *modelsTextView;
+@property (retain) IBOutlet NSTextView *causesTextView;
 @property (weak) IBOutlet NSComboBox *categoryComboBox;
+@property (weak) IBOutlet NSComboBox *modelsComboBox;
+
+@property (nonatomic, retain) NSTextView *parentTextView;
+
 - (IBAction)addModelButtonPressed:(id)sender;
 - (IBAction)addCauseButtonPressed:(id)sender;
 - (IBAction)saveButtonPressed:(id)sender;

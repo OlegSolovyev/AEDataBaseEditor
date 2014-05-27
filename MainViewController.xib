@@ -6,7 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainViewController">
             <connections>
-                <outlet property="dbView" destination="f5o-Ws-ZRg" id="rkE-Qe-adh"/>
+                <outlet property="dbView" destination="f5o-Ws-ZRg" id="ePW-zt-vys"/>
                 <outlet property="openButton" destination="L7z-9C-CEh" id="wLp-8E-Vhn"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -35,15 +35,15 @@
                         <rect key="frame" x="1" y="1" width="1166" height="485"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="f5o-Ws-ZRg">
+                            <textView ambiguous="YES" editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="f5o-Ws-ZRg">
                                 <rect key="frame" x="0.0" y="0.0" width="1166" height="485"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="1166" height="485"/>
-                                <size key="maxSize" width="1166" height="10000000"/>
+                                <size key="maxSize" width="1168" height="10000000"/>
                                 <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="1166" height="485"/>
-                                <size key="maxSize" width="1166" height="10000000"/>
+                                <size key="maxSize" width="1168" height="10000000"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -57,14 +57,6 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hwl-mB-vUI">
-                    <rect key="frame" x="191" y="665" width="114" height="43"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                    <buttonCell key="cell" type="squareTextured" title="New Data Base" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="lJS-xo-9w8">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
-                </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gWL-xQ-vCn">
                     <rect key="frame" x="34" y="61" width="110" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -77,7 +69,7 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vo7-8f-sBX">
-                    <rect key="frame" x="191" y="61" width="110" height="48"/>
+                    <rect key="frame" x="258" y="61" width="110" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="squareTextured" title="Check Valid" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bJZ-R9-oJJ">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -85,12 +77,15 @@
                     </buttonCell>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkO-oJ-W0l">
-                    <rect key="frame" x="1092" y="61" width="110" height="48"/>
+                    <rect key="frame" x="258" y="663" width="110" height="48"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="squareTextured" title="Save" bezelStyle="texturedSquare" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TvJ-qM-eCK">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="saveButtonPressed:" target="-2" id="HQC-6b-c1x"/>
+                    </connections>
                 </button>
             </subviews>
         </customView>
