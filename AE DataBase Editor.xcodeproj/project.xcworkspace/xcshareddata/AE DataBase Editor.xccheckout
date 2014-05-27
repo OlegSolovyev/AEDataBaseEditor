@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7B2514C9-677E-4C1E-A7E6-C6C186671AFF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AE DataBase Editor</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0E283D11-5107-4B62-A60E-4A3172F3D8DD</key>
+		<string>https://github.com/OlegSolovyev/AE-Data-Base-Editor.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AE DataBase Editor.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0E283D11-5107-4B62-A60E-4A3172F3D8DD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/OlegSolovyev/AE-Data-Base-Editor.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0E283D11-5107-4B62-A60E-4A3172F3D8DD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0E283D11-5107-4B62-A60E-4A3172F3D8DD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AE DataBase Editor</string>
+		</dict>
+	</array>
+</dict>
+</plist>

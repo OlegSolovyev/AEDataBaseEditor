@@ -8,9 +8,11 @@
 
 #import "AEAddSymptomWindow.h"
 #import "AEAddModelWindow.h"
+#import "AEAddCauseWindow.h"
 
 @interface AEAddSymptomWindow ()
 @property (nonatomic, retain) AEAddModelWindow *addModelWindow;
+@property (nonatomic, retain) AEAddCauseWindow *addCauseWindow;
 @end
 
 @implementation AEAddSymptomWindow
@@ -37,6 +39,8 @@
 }
 
 - (IBAction)addCauseButtonPressed:(id)sender {
+    self.addCauseWindow= [[AEAddCauseWindow alloc] initWithWindowNibName:@"AEAddCauseWindow"];
+    [self.addCauseWindow showWindow:self];
 }
 
 - (IBAction)saveButtonPressed:(id)sender {
