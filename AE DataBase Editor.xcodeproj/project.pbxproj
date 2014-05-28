@@ -24,6 +24,7 @@
 		7F8858761935177100432A24 /* AEAddCauseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8858741935177100432A24 /* AEAddCauseWindow.m */; };
 		7F8858771935177100432A24 /* AEAddCauseWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8858751935177100432A24 /* AEAddCauseWindow.xib */; };
 		7F88587D19354B9900432A24 /* AE.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F88587C19354B9900432A24 /* AE.png */; };
+		F8A4B80819360E63008FFBA4 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8A4B80719360E63008FFBA4 /* Main.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		7F8858741935177100432A24 /* AEAddCauseWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddCauseWindow.m; sourceTree = "<group>"; };
 		7F8858751935177100432A24 /* AEAddCauseWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddCauseWindow.xib; sourceTree = "<group>"; };
 		7F88587C19354B9900432A24 /* AE.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AE.png; sourceTree = "<group>"; };
+		F8A4B80719360E63008FFBA4 /* Main.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		7F0FB9B81934D2C200A22BE5 /* AE DataBase Editor */ = {
 			isa = PBXGroup;
 			children = (
+				F8A4B80719360E63008FFBA4 /* Main.xib */,
 				7F0FB9C41934D2C200A22BE5 /* AEAppDelegate.h */,
 				7F0FB9C51934D2C200A22BE5 /* AEAppDelegate.m */,
 				7F0FB9E91934E4A100A22BE5 /* MainViewController.h */,
@@ -269,6 +272,7 @@
 				7F0FB9ED1934E4A100A22BE5 /* MainViewController.xib in Resources */,
 				7F8858771935177100432A24 /* AEAddCauseWindow.xib in Resources */,
 				7F0FB9C31934D2C200A22BE5 /* Credits.rtf in Resources */,
+				F8A4B80819360E63008FFBA4 /* Main.xib in Resources */,
 				7F88587D19354B9900432A24 /* AE.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +424,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AE DataBase Editor/AE DataBase Editor-Prefix.pch";
 				INFOPLIST_FILE = "AE DataBase Editor/AE DataBase Editor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -433,6 +438,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AE DataBase Editor/AE DataBase Editor-Prefix.pch";
 				INFOPLIST_FILE = "AE DataBase Editor/AE DataBase Editor-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
