@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface AEAddCauseWindow : NSWindowController
-@property (retain) IBOutlet NSTextView *causeTextView;
+@property (retain) IBOutlet NSTextField *causeTextField;
 @property (retain) IBOutlet NSTextView *tagsTextView;
 @property (weak) IBOutlet NSComboBox *addTagComboBox;
 @property (weak) IBOutlet NSTextField *probabilityTextField;

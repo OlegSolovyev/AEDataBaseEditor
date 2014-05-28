@@ -47,7 +47,11 @@
 }
 
 - (IBAction)doneButtonPressed:(id)sender {
-    if([self.causeTextView.string isEqualToString:@""]){
+    
+    self.causeTextField.stringValue = [self.causeTextField.stringValue stringByReplacingOccurrencesOfString:@";" withString:@",-"];
+    self.causeTextField.stringValue = [self.causeTextField.stringValue stringByReplacingOccurrencesOfString:@":" withString:@"-"];
+    
+    if([self.causeTextField.stringValue isEqualToString:@""]){
         [self alert:@"Error" text:@"Please enter the cause"];
     } else if(self.probabilityTextField.intValue > 100 || self.probabilityTextField.intValue < 0){
         [self alert:@"Error" text:@"Probability must be between 0 and 100 per cent"];
@@ -57,7 +61,7 @@
             self.probabilityTextField.stringValue = @"100";
         }
     } else{
-        NSString *result = [NSString stringWithFormat:@"%@:%@%@",self.causeTextView.string,self.probabilityTextField.stringValue, self.tagsTextView.string];
+        NSString *result = [NSString stringWithFormat:@"%@:%@%@",self.causeTextField.stringValue,self.probabilityTextField.stringValue, self.tagsTextView.string];
         if([self.parentTextView.string isEqualToString:@""]){
             [self.parentTextView setString:result];
         } else{
