@@ -20,5 +20,6 @@
 - (IBAction)addModelButtonPressed:(id)sender;
 - (IBAction)addCauseButtonPressed:(id)sender;
 - (IBAction)saveButtonPressed:(id)sender;
+- (IBAction)undoCauseButtonPressed:(id)sender;
 
 @end

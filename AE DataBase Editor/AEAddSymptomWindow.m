@@ -87,4 +87,22 @@
         [self.window performClose:self];
     }
 }
+
+- (IBAction)undoCauseButtonPressed:(id)sender {
+    if(![self.causesTextView.string isEqualToString:@""]){
+        NSArray *array = [self.causesTextView.string componentsSeparatedByString:@"\n"];
+        for(NSString *str in array){
+            NSLog(@": %@",str);
+        }
+        NSString *result = @"";
+        
+        for(int i = 0; i < array.count - 1; ++i){
+            
+            result = [result stringByAppendingString:[NSString stringWithFormat:((i == array.count - 2) ? @"%@" : @"%@\n"),[array objectAtIndex:i]]];
+            
+        }
+        NSLog(@"%@end",result);
+        [self.causesTextView setString:result];
+    }
+}
 @end
