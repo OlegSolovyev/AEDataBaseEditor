@@ -26,6 +26,15 @@
     return self;
 }
 
+- (void)alert:(NSString *)message text:(NSString *)text{
+    NSAlert *alert = [[NSAlert alloc]init];
+    [alert setMessageText:message];
+    [alert setAlertStyle:NSInformationalAlertStyle];
+    [alert setInformativeText:text];
+    [alert beginSheetModalForWindow:self.window
+                      modalDelegate:self didEndSelector:nil contextInfo:nil];
+}
+
 - (IBAction)openButtonPressed:(id)sender {
     NSOpenPanel* openDlg = [NSOpenPanel openPanel];
     
@@ -81,6 +90,74 @@
                                encoding:NSUTF8StringEncoding
                                   error:nil];
     }
+}
+
+- (int)countOccurencesOfSubString:(NSString *)searchString inString:(NSString *)string {
+    unsigned long strCount = [string length] - [[string stringByReplacingOccurrencesOfString:searchString withString:@""] length];
+    return (int) strCount / [searchString length];
+}
+
+- (int)latestIndex{
+    int index;
+    NSArray *strings = [self.dbView.string componentsSeparatedByString:@"\n"];
+    for(int i = (int)strings.count - 1; i >= 0; i--){
+        NSString *str = [strings objectAtIndex:i];
+        if ([str isEqualToString:@"Index:"]) {
+            index = [[strings objectAtIndex:i + 1] intValue] + 1;
+            break;
+        }
+    }
+    NSLog(@"%d",index);
+    return index;
+}
+
+- (BOOL)modelsAreOK{
+    return YES;
+}
+
+- (BOOL)categoriesAreOK{
+    return YES;
+}
+
+- (BOOL)causesAreOk{
+    return YES;
+}
+
+- (BOOL)sypmtomsHaveAllComponents{
+    int index = [self latestIndex];
+    if(!index){
+        return NO;
+    }
+    if([self countOccurencesOfSubString:@"Symptom" inString:self.dbView.string] != index){
+        return NO;
+    }
+    if([self countOccurencesOfSubString:@"Index:" inString:self.dbView.string] != index){
+        return NO;
+    }
+    if([self countOccurencesOfSubString:@"Category:" inString:self.dbView.string] != index){
+        return NO;
+    }
+    if([self countOccurencesOfSubString:@"Name:" inString:self.dbView.string] != index){
+        return NO;
+    }
+    if([self countOccurencesOfSubString:@"Causes:" inString:self.dbView.string] != index){
+        return NO;
+    }
+    if([self countOccurencesOfSubString:@"Models:" inString:self.dbView.string] != index){
+        return NO;
+    }
+    if(![self modelsAreOK] || ![self categoriesAreOK] || ![self causesAreOk]){
+        return NO;
+    }
+    return YES;
+}
+
+- (IBAction)checkValidButtonPressed:(id)sender {
+    if([self.dbView.string isEqualToString:@""]){
+        [self alert:@"Error" text:@"Data base is empty"];
+    } else if(![self sypmtomsHaveAllComponents]){
+        [self alert:@"Error" text:@"Data base is corrupred"];
+    } else [self alert:@"Check" text:[NSString stringWithFormat:@"Data base is OK\nSymptoms found: %d",[self latestIndex]]];
 }
 
 @end

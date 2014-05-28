@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
@@ -32,17 +33,17 @@
                     <rect key="frame" x="34" y="147" width="1168" height="487"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <clipView key="contentView" ambiguous="YES" misplaced="YES" id="1gd-hq-BUG">
-                        <rect key="frame" x="1" y="1" width="1166" height="485"/>
+                        <rect key="frame" x="1" y="1" width="1151" height="485"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView ambiguous="YES" editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="f5o-Ws-ZRg">
-                                <rect key="frame" x="0.0" y="0.0" width="1166" height="485"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1151" height="485"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="1166" height="485"/>
+                                <size key="minSize" width="1151" height="485"/>
                                 <size key="maxSize" width="1168" height="10000000"/>
                                 <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="minSize" width="1166" height="485"/>
+                                <size key="minSize" width="1151" height="485"/>
                                 <size key="maxSize" width="1168" height="10000000"/>
                             </textView>
                         </subviews>
@@ -53,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="9zO-aa-Har">
-                        <rect key="frame" x="1151" y="1" width="16" height="485"/>
+                        <rect key="frame" x="1152" y="1" width="15" height="485"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                 </scrollView>
@@ -75,6 +76,9 @@
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="checkValidButtonPressed:" target="-2" id="cMB-oA-tBr"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkO-oJ-W0l">
                     <rect key="frame" x="258" y="663" width="110" height="48"/>

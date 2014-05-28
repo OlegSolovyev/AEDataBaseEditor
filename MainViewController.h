@@ -17,5 +17,6 @@
 - (IBAction)openButtonPressed:(id)sender;
 - (IBAction)addSymptomButtonPressed:(id)sender;
 - (IBAction)saveButtonPressed:(id)sender;
+- (IBAction)checkValidButtonPressed:(id)sender;
 
 @end

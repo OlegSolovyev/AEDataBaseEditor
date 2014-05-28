@@ -71,7 +71,7 @@
     } else{
         int index;
         if([self.parentTextView.string rangeOfString:@"Index:"].location == NSNotFound){
-            index = 0;
+            index = 1;
         } else{
             NSArray *strings = [self.parentTextView.string componentsSeparatedByString:@"\n"];
             for(int i = (int)strings.count - 1; i >= 0; i--){
