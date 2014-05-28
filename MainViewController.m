@@ -103,7 +103,7 @@
     for(int i = (int)strings.count - 1; i >= 0; i--){
         NSString *str = [strings objectAtIndex:i];
         if ([str isEqualToString:@"Index:"]) {
-            index = [[strings objectAtIndex:i + 1] intValue] + 1;
+            index = [[strings objectAtIndex:i + 1] intValue];
             break;
         }
     }
