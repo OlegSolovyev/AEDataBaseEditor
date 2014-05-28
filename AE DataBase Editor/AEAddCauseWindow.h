@@ -12,6 +12,7 @@
 @property (retain) IBOutlet NSTextView *causeTextView;
 @property (retain) IBOutlet NSTextView *tagsTextView;
 @property (weak) IBOutlet NSComboBox *addTagComboBox;
+@property (weak) IBOutlet NSTextField *probabilityTextField;
 
 @property (nonatomic, retain) NSTextView *parentTextView;
 
