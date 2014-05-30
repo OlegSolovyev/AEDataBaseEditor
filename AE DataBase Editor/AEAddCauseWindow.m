@@ -46,6 +46,20 @@
    }
 }
 
+- (int)latestIndex{
+    int index;
+    NSArray *strings = [self.dbTextView.string componentsSeparatedByString:@"\n"];
+    for(int i = (int)strings.count - 1; i >= 0; i--){
+        NSString *str = [strings objectAtIndex:i];
+        if ([str isEqualToString:@"Index:"]) {
+            index = [[strings objectAtIndex:i + 1] intValue];
+            break;
+        }
+    }
+    NSLog(@"%d",index);
+    return index;
+}
+
 - (IBAction)doneButtonPressed:(id)sender {
     
     self.causeTextField.stringValue = [self.causeTextField.stringValue stringByReplacingOccurrencesOfString:@";" withString:@",-"];
@@ -53,6 +67,10 @@
     
     if([self.causeTextField.stringValue isEqualToString:@""]){
         [self alert:@"Error" text:@"Please enter the cause"];
+    } else if(self.linkField.intValue < 0){
+        [self alert:@"Error" text:@"Linked symptom index cannot be less than 0"];
+    } else if(self.linkField.intValue > [self latestIndex]){
+        [self alert:@"Error" text:@"The symptom index you are trying to link to does not exist"];
     } else if(self.probabilityTextField.intValue > 100 || self.probabilityTextField.intValue < 0){
         [self alert:@"Error" text:@"Probability must be between 0 and 100 per cent"];
         if(self.probabilityTextField.intValue < 0){
@@ -61,7 +79,7 @@
             self.probabilityTextField.stringValue = @"100";
         }
     } else{
-        NSString *result = [NSString stringWithFormat:@"%@:%@%@",self.causeTextField.stringValue,self.probabilityTextField.stringValue, self.tagsTextView.string];
+        NSString *result = [NSString stringWithFormat:@"%@:%@$%@%@",self.causeTextField.stringValue,self.probabilityTextField.stringValue, self.linkField.stringValue, self.tagsTextView.string];
         if([self.parentTextView.string isEqualToString:@""]){
             [self.parentTextView setString:result];
         } else{

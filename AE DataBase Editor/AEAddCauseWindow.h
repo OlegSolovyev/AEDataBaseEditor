@@ -13,8 +13,10 @@
 @property (retain) IBOutlet NSTextView *tagsTextView;
 @property (weak) IBOutlet NSComboBox *addTagComboBox;
 @property (weak) IBOutlet NSTextField *probabilityTextField;
+@property (weak) IBOutlet NSTextField *linkField;
 
 @property (nonatomic, retain) NSTextView *parentTextView;
+@property (nonatomic, retain) NSTextView *dbTextView;
 
 - (IBAction)addTagButtonPressed:(id)sender;
 - (IBAction)doneButtonPressed:(id)sender;

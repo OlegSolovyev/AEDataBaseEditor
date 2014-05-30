@@ -58,6 +58,7 @@
 - (IBAction)addCauseButtonPressed:(id)sender {
     self.addCauseWindow= [[AEAddCauseWindow alloc] initWithWindowNibName:@"AEAddCauseWindow"];
     [self.addCauseWindow setParentTextView:self.causesTextView];
+    [self.addCauseWindow setDbTextView:self.parentTextView];
     [self.addCauseWindow showWindow:self];
 }
 
