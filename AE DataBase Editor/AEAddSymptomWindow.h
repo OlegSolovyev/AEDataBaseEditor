@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface AEAddSymptomWindow : NSWindowController
+@interface AEAddSymptomWindow : NSWindowController <NSComboBoxDataSource, NSComboBoxDelegate>
 @property (weak) IBOutlet NSTextField *nameTextField;
 @property (retain) IBOutlet NSTextView *modelsTextView;
 @property (retain) IBOutlet NSTextView *causesTextView;

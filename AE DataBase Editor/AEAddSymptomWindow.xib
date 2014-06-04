@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
@@ -66,14 +66,14 @@
                         <rect key="frame" x="274" y="367" width="597" height="53"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="53K-Dg-sYO">
-                            <rect key="frame" x="1" y="1" width="580" height="51"/>
+                            <rect key="frame" x="1" y="1" width="595" height="51"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView ambiguous="YES" editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="O31-eJ-ZyX">
-                                    <rect key="frame" x="0.0" y="0.0" width="580" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="595" height="51"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="580" height="51"/>
+                                    <size key="minSize" width="595" height="51"/>
                                     <size key="maxSize" width="729" height="10000000"/>
                                     <attributedString key="textStorage">
                                         <fragment content="All">
@@ -84,7 +84,7 @@
                                         </fragment>
                                     </attributedString>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="580" height="51"/>
+                                    <size key="minSize" width="595" height="51"/>
                                     <size key="maxSize" width="729" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -95,7 +95,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="uKO-yr-TtN">
-                            <rect key="frame" x="581" y="1" width="15" height="51"/>
+                            <rect key="frame" x="580" y="1" width="16" height="51"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -123,17 +123,17 @@
                         <rect key="frame" x="274" y="149" width="597" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="exo-4K-bKT">
-                            <rect key="frame" x="1" y="1" width="580" height="100"/>
+                            <rect key="frame" x="1" y="1" width="595" height="100"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <textView ambiguous="YES" editable="NO" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="NPO-i3-bv5">
-                                    <rect key="frame" x="0.0" y="0.0" width="580" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="595" height="100"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="580" height="100"/>
+                                    <size key="minSize" width="595" height="100"/>
                                     <size key="maxSize" width="729" height="10000000"/>
                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    <size key="minSize" width="580" height="100"/>
+                                    <size key="minSize" width="595" height="100"/>
                                     <size key="maxSize" width="729" height="10000000"/>
                                 </textView>
                             </subviews>
@@ -144,7 +144,7 @@
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="exs-Cr-7As">
-                            <rect key="frame" x="581" y="1" width="15" height="100"/>
+                            <rect key="frame" x="580" y="1" width="16" height="100"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
@@ -202,25 +202,17 @@
                         </comboBoxCell>
                     </comboBox>
                     <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZ8-Id-HUf">
-                        <rect key="frame" x="276" y="320" width="334" height="26"/>
+                        <rect key="frame" x="276" y="320" width="450" height="26"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" numberOfVisibleItems="5" id="Ifv-Nw-D4R">
+                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesDataSource="YES" numberOfVisibleItems="5" id="Ifv-Nw-D4R">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            <objectValues>
-                                <string>ВАЗ 2101</string>
-                                <string>ВАЗ 2102</string>
-                                <string>ВАЗ 2103</string>
-                                <string>ВАЗ 2104</string>
-                                <string>ВАЗ 2105</string>
-                                <string>ВАЗ 2106</string>
-                                <string>ВАЗ 2107</string>
-                                <string>ВАЗ 2108</string>
-                                <string>ВАЗ 2109</string>
-                                <string>ВАЗ 2110</string>
-                            </objectValues>
                         </comboBoxCell>
+                        <connections>
+                            <outlet property="dataSource" destination="-2" id="RKp-nn-vMQ"/>
+                            <outlet property="delegate" destination="-2" id="6Bi-MN-WCd"/>
+                        </connections>
                     </comboBox>
                 </subviews>
             </view>

@@ -21,6 +21,7 @@
 		7F0FB9ED1934E4A100A22BE5 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9EB1934E4A100A22BE5 /* MainViewController.xib */; };
 		7F0FB9F61934FAFB00A22BE5 /* AEAddSymptomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F41934FAFB00A22BE5 /* AEAddSymptomWindow.m */; };
 		7F0FB9F71934FAFB00A22BE5 /* AEAddSymptomWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */; };
+		7F4EC5BD193FB9FF0038A8C6 /* allModels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7F4EC5BC193FB9FF0038A8C6 /* allModels.txt */; };
 		7F8858761935177100432A24 /* AEAddCauseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8858741935177100432A24 /* AEAddCauseWindow.m */; };
 		7F8858771935177100432A24 /* AEAddCauseWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F8858751935177100432A24 /* AEAddCauseWindow.xib */; };
 		7F88587D19354B9900432A24 /* AE.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F88587C19354B9900432A24 /* AE.png */; };
@@ -62,6 +63,7 @@
 		7F0FB9F31934FAFB00A22BE5 /* AEAddSymptomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAddSymptomWindow.h; sourceTree = "<group>"; };
 		7F0FB9F41934FAFB00A22BE5 /* AEAddSymptomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddSymptomWindow.m; sourceTree = "<group>"; };
 		7F0FB9F51934FAFB00A22BE5 /* AEAddSymptomWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddSymptomWindow.xib; sourceTree = "<group>"; };
+		7F4EC5BC193FB9FF0038A8C6 /* allModels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = allModels.txt; sourceTree = "<group>"; };
 		7F8858731935177100432A24 /* AEAddCauseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AEAddCauseWindow.h; sourceTree = "<group>"; };
 		7F8858741935177100432A24 /* AEAddCauseWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AEAddCauseWindow.m; sourceTree = "<group>"; };
 		7F8858751935177100432A24 /* AEAddCauseWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AEAddCauseWindow.xib; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				7F8858731935177100432A24 /* AEAddCauseWindow.h */,
 				7F8858741935177100432A24 /* AEAddCauseWindow.m */,
 				7F8858751935177100432A24 /* AEAddCauseWindow.xib */,
+				7F4EC5BC193FB9FF0038A8C6 /* allModels.txt */,
 				7F0FB9CA1934D2C200A22BE5 /* Images.xcassets */,
 				7F0FB9B91934D2C200A22BE5 /* Supporting Files */,
 			);
@@ -266,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F4EC5BD193FB9FF0038A8C6 /* allModels.txt in Resources */,
 				7F0FB9BD1934D2C200A22BE5 /* InfoPlist.strings in Resources */,
 				7F0FB9CB1934D2C200A22BE5 /* Images.xcassets in Resources */,
 				7F0FB9F71934FAFB00A22BE5 /* AEAddSymptomWindow.xib in Resources */,

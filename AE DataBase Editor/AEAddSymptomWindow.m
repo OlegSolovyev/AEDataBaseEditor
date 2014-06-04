@@ -12,6 +12,7 @@
 @interface AEAddSymptomWindow ()
 @property (nonatomic, retain) AEAddCauseWindow *addCauseWindow;
 @property (nonatomic, retain) NSMutableArray *categories;
+@property (nonatomic, retain) NSArray *models;
 @end
 
 @implementation AEAddSymptomWindow
@@ -30,8 +31,41 @@
 - (void)windowDidLoad
 {
     [super windowDidLoad];
+    [self loadModels];
     
     // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+}
+
+- (void)loadModels{
+    NSFileManager *filemgr;
+    filemgr = [NSFileManager defaultManager];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"allModels" ofType:@"txt"];
+    if ([filemgr fileExistsAtPath: path ] == YES)
+        //        NSLog (@"File exists %@", path );
+        ;
+    else
+        NSLog (@"File not found");
+    
+    NSString *dataBase = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    
+    // first, separate by new line
+    self.models = [dataBase componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+}
+
+- (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox{
+    if([aComboBox isEqual:self.modelsComboBox]){
+        return self.models.count;
+    } else{
+        return 0;
+    }
+}
+
+- (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)loc{
+    if([aComboBox isEqual:self.modelsComboBox]){
+        return [self.models objectAtIndex:loc];
+    } else {
+        return nil;
+    }
 }
 
 - (void)alert:(NSString *)message text:(NSString *)text{
