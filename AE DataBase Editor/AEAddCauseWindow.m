@@ -46,6 +46,12 @@
    }
 }
 
+- (IBAction)addFactorButtonPressed:(id)sender {
+    if(![self.addFactorComboBox.stringValue isEqualToString:@""]){
+        [self.factorsTextView setString:[self.factorsTextView.string stringByAppendingString:[NSString stringWithFormat:@"&%@",self.addFactorComboBox.stringValue]]];
+    }
+}
+
 - (int)latestIndex{
     int index;
     NSArray *strings = [self.dbTextView.string componentsSeparatedByString:@"\n"];
@@ -58,6 +64,38 @@
     }
     NSLog(@"%d",index);
     return index;
+}
+
+
+
+- (IBAction)undoTagButtonPressed:(id)sender {
+    if(![self.tagsTextView.string isEqualToString:@""]){
+        NSArray *array = [self.tagsTextView.string componentsSeparatedByString:@";"];
+        NSString *result = @"";
+        for(int i = 1; i < array.count - 1; ++i){
+            if(array.count > 2){
+                result = [result stringByAppendingString:[NSString stringWithFormat:@";%@",[array objectAtIndex:i]]];
+            } else{
+                result = @"";
+            }
+        }
+        [self.tagsTextView setString:result];
+    }
+}
+
+- (IBAction)undoFactorButtonPressed:(id)sender {
+    if(![self.factorsTextView.string isEqualToString:@""]){
+        NSArray *array = [self.factorsTextView.string componentsSeparatedByString:@"&"];
+        NSString *result = @"";
+        for(int i = 1; i < array.count - 1; ++i){
+            if(array.count > 2){
+                result = [result stringByAppendingString:[NSString stringWithFormat:@"&%@",[array objectAtIndex:i]]];
+            } else{
+                result = @"";
+            }
+        }
+        [self.factorsTextView setString:result];
+    }
 }
 
 - (IBAction)doneButtonPressed:(id)sender {
@@ -80,6 +118,7 @@
         }
     } else{
         NSString *result = [NSString stringWithFormat:@"%@:%@$%@%@",self.causeTextField.stringValue,self.probabilityTextField.stringValue, self.linkField.stringValue, self.tagsTextView.string];
+        result = [result stringByAppendingString:self.factorsTextView.string];
         if([self.parentTextView.string isEqualToString:@""]){
             [self.parentTextView setString:result];
         } else{
@@ -89,18 +128,4 @@
     }
 }
 
-- (IBAction)undoButtonPressed:(id)sender {
-    if(![self.tagsTextView.string isEqualToString:@""]){
-        NSArray *array = [self.tagsTextView.string componentsSeparatedByString:@";"];
-        NSString *result = @"";
-        for(int i = 1; i < array.count - 1; ++i){
-            if(array.count > 2){
-                result = [result stringByAppendingString:[NSString stringWithFormat:@";%@",[array objectAtIndex:i]]];
-            } else{
-                result = @"";
-            }
-        }
-        [self.tagsTextView setString:result];
-    }
-}
 @end
