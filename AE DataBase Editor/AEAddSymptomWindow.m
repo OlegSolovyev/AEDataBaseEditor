@@ -81,7 +81,7 @@
     if(self.modelsComboBox.stringValue){
         [self.modelsTextView setEditable:YES];
         if([self.modelsTextView.string isEqualToString:@"All"]){
-            if(![self.modelsComboBox.stringValue isEqualToString:@""])[self.modelsTextView setString: self.modelsComboBox.stringValue];
+            if(![self.modelsComboBox.stringValue isEqualToString:@""])[self.modelsTextView setString: [[NSString stringWithFormat:@";"] stringByAppendingString: self.modelsComboBox.stringValue]];
         } else{
             [self.modelsTextView setString:[self.modelsTextView.string stringByAppendingString: [NSString stringWithFormat:@";%@", self.modelsComboBox.stringValue]]];
         }
@@ -94,33 +94,6 @@
     [self.addCauseWindow setParentTextView:self.causesTextView];
     [self.addCauseWindow setDbTextView:self.parentTextView];
     [self.addCauseWindow showWindow:self];
-}
-
-- (IBAction)saveButtonPressed:(id)sender {
-    if([self.nameTextField.stringValue isEqualToString:@""]){
-        [self alert:@"Error" text:@"Please set the name"];
-    } else if([self.categoryComboBox.stringValue isEqualToString:@""]){
-        [self alert:@"Error" text:@"Please choose the category"];
-    } else if([self.causesTextView.string isEqualToString:@""]){
-        [self alert:@"Error" text:@"Please add causes"];
-    } else{
-        int index;
-        if([self.parentTextView.string rangeOfString:@"Index:"].location == NSNotFound){
-            index = 1;
-        } else{
-            NSArray *strings = [self.parentTextView.string componentsSeparatedByString:@"\n"];
-            for(int i = (int)strings.count - 1; i >= 0; i--){
-                NSString *str = [strings objectAtIndex:i];
-                if ([str isEqualToString:@"Index:"]) {
-                    index = [[strings objectAtIndex:i + 1] intValue] + 1;
-                    break;
-                }
-            }
-        }
-        NSString *result = [NSString stringWithFormat:@"\nSymptom\nIndex:\n%d\nCategory:\n%@\nName:\n%@\nCauses:\n%@\nModels:\n%@\n", index, self.categoryComboBox.stringValue,self.nameTextField.stringValue,self.causesTextView.string,self.modelsTextView.string ];
-        [self.parentTextView setString:[self.parentTextView.string stringByAppendingString:result]];
-        [self.window performClose:self];
-    }
 }
 
 - (IBAction)undoCauseButtonPressed:(id)sender {
@@ -140,4 +113,58 @@
         [self.causesTextView setString:result];
     }
 }
+
+- (IBAction)undoModelButtonPressed:(id)sender {
+    if(![self.modelsTextView.string isEqualToString:@"All"]){
+        NSArray *array = [self.modelsTextView.string componentsSeparatedByString:@";"];
+        NSString *result = @"";
+        for(int i = 1; i < array.count - 1; ++i){
+            if(array.count > 2){
+                result = [result stringByAppendingString:[NSString stringWithFormat:@";%@",[array objectAtIndex:i]]];
+            } else{
+                result = @"All";
+            }
+        }
+
+        [self.modelsTextView setString:result];
+    }
+}
+
+- (int)countOccurencesOfSubString:(NSString *)searchString inString:(NSString *)string {
+    unsigned long strCount = [string length] - [[string stringByReplacingOccurrencesOfString:searchString withString:@""] length];
+    NSLog(@"%d", (int) (strCount / [searchString length]));
+    return (int) (strCount / [searchString length]);
+}
+
+- (IBAction)saveButtonPressed:(id)sender {
+    if([self.nameTextField.stringValue isEqualToString:@""]){
+        [self alert:@"Error" text:@"Please set the name"];
+    } else if([self.categoryComboBox.stringValue isEqualToString:@""]){
+        [self alert:@"Error" text:@"Please choose the category"];
+    } else if([self.causesTextView.string isEqualToString:@""]){
+        [self alert:@"Error" text:@"Please add causes"];
+    } else if(![self.modelsTextView.string isEqualToString:@"All"]
+              && ([self countOccurencesOfSubString:@":" inString:self.modelsTextView.string] != [self countOccurencesOfSubString:@";" inString:self.modelsTextView.string])){
+        [self alert:@"Error" text:@"Model must be of folowing format : 'BrandName:ModelName' "];
+    } else{
+        int index;
+        if([self.parentTextView.string rangeOfString:@"Index:"].location == NSNotFound){
+            index = 1;
+        } else{
+            NSArray *strings = [self.parentTextView.string componentsSeparatedByString:@"\n"];
+            for(int i = (int)strings.count - 1; i >= 0; i--){
+                NSString *str = [strings objectAtIndex:i];
+                if ([str isEqualToString:@"Index:"]) {
+                    index = [[strings objectAtIndex:i + 1] intValue] + 1;
+                    break;
+                }
+            }
+        }
+        [self.modelsTextView setString:[self.modelsTextView.string stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:@"" ]];
+        NSString *result = [NSString stringWithFormat:@"\nSymptom\nIndex:\n%d\nCategory:\n%@\nName:\n%@\nCauses:\n%@\nModels:\n%@\n", index, self.categoryComboBox.stringValue,self.nameTextField.stringValue,self.causesTextView.string,self.modelsTextView.string ];
+        [self.parentTextView setString:[self.parentTextView.string stringByAppendingString:result]];
+        [self.window performClose:self];
+    }
+}
+
 @end
