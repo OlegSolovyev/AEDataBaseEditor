@@ -12,7 +12,7 @@
 @interface AEAddSymptomWindow ()
 @property (nonatomic, retain) AEAddCauseWindow *addCauseWindow;
 @property (nonatomic, retain) NSMutableArray *categories;
-@property (nonatomic, retain) NSArray *models;
+@property (nonatomic, retain) NSMutableArray *models;
 @end
 
 @implementation AEAddSymptomWindow
@@ -49,7 +49,14 @@
     NSString *dataBase = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
     
     // first, separate by new line
-    self.models = [dataBase componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    self.models = [[NSMutableArray alloc] init];
+    NSArray *content = [dataBase componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    for(NSString *str in content){
+        NSLog(@"%@",str);
+        if(![str isEqualToString:@""]){
+            [self.models addObject:str];
+        }
+    }
 }
 
 - (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox{
