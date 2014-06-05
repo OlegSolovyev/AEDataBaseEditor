@@ -228,8 +228,8 @@
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <objectValues>
-                                <string>пробег</string>
-                                <string>год</string>
+                                <string>Пробег</string>
+                                <string>Год</string>
                                 <string>ТО</string>
                             </objectValues>
                         </comboBoxCell>
